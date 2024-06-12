@@ -1,0 +1,177 @@
+/* general */
+:root {
+  --blue: rgb(22, 143, 176);
+  --dark-blue: rgb(11, 109, 136);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  background-color: var(--blue);
+  justify-content: center;
+  align-items:center;
+  justify-content:
+  flex-direction:column;
+}
+
+body {
+  
+  font-family: Arial, Helvetica, sans-serif;
+}
+button{
+  border-radius: 1rem;
+}
+.matches{
+  z-index: 10;
+  position: relative;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.match{z-index: 5;}
+
+#matches-displayer{
+  z-index:9;
+  display:none;
+  align-items: center;
+
+}
+
+  
+/* matches choice */
+.matches-choice{
+  max-width: 100%;
+  z-index:8;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  
+}
+#begin{
+ 
+  background-color: darkcyan;
+  color: azure;
+}
+#begin:hover{cursor:pointer;}
+
+.matches-input:focus{
+  border:4px solid black;
+}
+main {
+  background-color: white;
+  width: 600px;
+  border-radius: 10px;
+  padding: 30px 10px;
+  box-shadow: 5px 10px 2px 3px rgb(29, 29, 29);
+  position:absolute;
+  
+}
+
+
+.score-container {
+  display: flex;
+  justify-content: space-around
+}
+
+.score-container > p {
+  background-color: #e4e4e4;
+  padding: 8px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.score-container > p > span {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.btn-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn-container > button {
+  background-color: var(--blue);
+  font-size: 50px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-container > button:hover {
+  background-color: var(--dark-blue);
+}
+
+.details {
+  text-align: center;
+}
+
+.result {
+  display: inline-block;
+  color: white;
+  padding: 10px 20px;
+  background-color: black;
+}
+
+.win {
+  background-color: green;
+}
+
+.lose {
+  background-color: red;
+}
+
+.draw {
+  background-color: #a7a7a7;
+}
+
+
+.match{
+ text-align: center;
+}
+/* modale */
+#modal-container{
+  
+  width: 60vh;
+  height:100vh;
+  display:none;
+  justify-content: center;
+  align-items: center;
+  animation-name: Fadein;
+  opacity: 0.6;;
+  z-index: 8;
+  margin-bottom: 7rem;;
+}
+#modal{ 
+width:80%;
+display:flex;
+justify-content: center;
+  transition:0.4s;
+background-color: rgb(232, 213, 213);
+z-index: 8;
+justify-content: center;
+align-items: center;
+top:0;
+color:white;
+}
+h3{color: black;}
+ul{
+  color:black;
+list-style:dash;}
+
+@keyframes Fadein{
+  from {opacity: 1} 
+  to {opacity: 0}
+}
+#modal p{color: black;}
+
+button {background-color:cornflowerblue;}
