@@ -1,4 +1,8 @@
-function displayRules(){let welcome = document.createElement('h3')
+
+let modalContainer = document.querySelector('#modal-container');
+
+function displayRules(){modalContainer.style.display= ('flex');
+    let welcome = document.createElement('h3')
 welcome.textContent='WELCOME';
 modal.append(welcome);
 let rules = document.createElement('ul');
@@ -12,5 +16,10 @@ rules.append(rule2);
 let begin = document.createElement('button');
 begin.textContent='OK,LET\'S START!'}
 
+function hideModal() {
+    modalContainer.style.display='none';
+    modal.textContent='';
+}
 
-export {displayRules}
+
+export {displayRules,hideModal}

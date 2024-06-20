@@ -86,10 +86,7 @@ function Checker(input){
 
 
 
-function hideModal() {
-    modalContainer.style.display='none';
-    modal.textContent='';
-}
+
 function checkMatches() {if (MatchesChoice === 0){ modal.innerText='';let paragraph = document.createElement('p')
                                         paragraph.innerText='end of matches';
                                         console.log('fine dei match')
