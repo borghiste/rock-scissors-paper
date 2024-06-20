@@ -7,7 +7,7 @@
   <title>Paper-Scissors-Rock</title>
   <script src="https://kit.fontawesome.com/394b7dd8e2.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"  defer></script>
+  <script src="script.js"  type="module"></script>
   
 </head>
 <body>
@@ -30,18 +30,18 @@
       </p>
     </div>
     <div class="btn-container" id="btn-container">
-      <button id="paper" >
+      <button id="paper">
         <i class="fa-regular fa-hand"></i>
       </button>
-      <button id="scissors" >
+      <button id="scissors">
         <i class="fa-regular fa-hand-scissors"></i>
       </button>
-      <button id="rock" >
+      <button id="rock">
         <i class="fa-solid fa-hand-fist"></i>
       </button>
     </div>
     <div class="details">
-      <p>You choose <span id="user-choice"></span></p>
+      <p>You chose <span id="user-choice"></span></p>
       <p>Computer chose: <span id="computer-choice"></span></p>
       <p id="result" class="result"></p>
     </div>

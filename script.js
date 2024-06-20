@@ -1,4 +1,4 @@
-
+import { displayRules } from "./modules/display.js";
 
 // dichiarazioni variabili globali
 let submit = document.querySelector('#begin');
@@ -22,30 +22,34 @@ let modalContainer = document.querySelector('#modal-container');
 let modal = document.querySelector('#modal')
 
 
-// click sul button container
-btnContainer.addEventListener('click',(e)=>{console.log(e);if(e.target.srcElement='BUTTON#SCISSORS'){Checker('scissors');CheckerDisplay()}
-                                                        else if (e.target.srcElement='BUTTON#PAPER'){checker('paper')}
-                                                        else if (e.target.srcElement='BUTTON#ROCK'){Checker('rock')}})
+const choices = {
+    rock: {
+      rock: 'tie',
+      scissors: 'win',
+      paper: 'lose'
+    },
+    scissors: {
+      rock: 'lose',
+      scissors: 'tie',
+      paper: 'win',
+    },
+    paper: {
+      rock: 'win',
+      scissors: 'lose',
+      paper: 'tie',
+    }
+}
 
 
-// mostrare regole nella modale
-
-displayModal()
 displayRules()
 
 
 
 
 
-// al click sulla finestra si nasconde la modale
- window.addEventListener('click',(e)=>{if (e.target == modalContainer ) {hideModal()}})
- 
 
 
 
-submit.addEventListener('click',()=>{MatchesChoiceonModal();hideinputandSubmitButton();showMMatchesDisplayer()})
-
-countMatch()
 
 
 
@@ -65,22 +69,22 @@ let MatchesCounterinHTML= document.querySelector('#matches-counter');
 
 
 let MatchesChoice= 0;
+// click sul button container
+// TODO
+// sistemare id btn-container
+btnContainer.addEventListener('click', (e)=>{Checker(e.target.id)})
 
 
+  
+function Checker(input){
 
-function displayRules(){let welcome = document.createElement('h3')
-welcome.textContent='WELCOME';
-modal.append(welcome);
-let rules = document.createElement('ul');
-modal.append(rules);
-let rule1 = document.createElement('li');
-rule1.textContent='select the number of matches you wanna play';
-rules.append(rule1);
-let rule2 = document.createElement('li');
-rule2.textContent= 'A match ends when the player or the computer reaches 20 points';
-rules.append(rule2);
-let begin = document.createElement('button');
-begin.textContent='OK,LET\'S START!'}
+    const computerChoices=['paper','scissors','rock']
+    let computerChoice = computerChoices[Math.floor(Math.random())*3];
+    computerChoiceResult.textContent = computerChoice;
+    userChoiceResult.textContent = input;
+    }
+
+
 
 function hideModal() {
     modalContainer.style.display='none';
@@ -100,7 +104,7 @@ function hideinputandSubmitButton(){inputField.style.display='none';
 
 function showMMatchesDisplayer(){MatchesDisplayer.style.display='flex'}
 
-function countMatch(){MatchesCounterinHTML.textContent=MatchesCounter;}
+
 
 
 
