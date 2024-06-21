@@ -16,7 +16,9 @@ rules.append(rule2);
 let begin = document.createElement('button');
 begin.textContent='OK,LET\'S START!'}
 
-function hideModal() {
+
+
+function hideModal(){
     modalContainer.style.display='none';
     modal.textContent='';
 }

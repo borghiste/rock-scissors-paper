@@ -7,7 +7,8 @@
   <title>Paper-Scissors-Rock</title>
   <script src="https://kit.fontawesome.com/394b7dd8e2.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"  type="module"></script>
+  <script src="script.js"  type="module" ></script>
+  <script src="./modules/game.js" defer></script>
   
 </head>
 <body>
@@ -36,7 +37,7 @@
       <button id="scissors">
         <i class="fa-regular fa-hand-scissors"></i>
       </button>
-      <button id="rock">
+      <button onclick="checker('rock')">
         <i class="fa-solid fa-hand-fist"></i>
       </button>
     </div>
