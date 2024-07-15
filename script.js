@@ -1,4 +1,4 @@
-import { displayRules,hideModal,colorChanger } from "./modules/display.js";
+import { displayRules,hideModal } from "./modules/display.js";
 
 // dichiarazioni variabili globali
 let submit = document.querySelector('#begin');

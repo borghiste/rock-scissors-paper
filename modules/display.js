@@ -24,23 +24,5 @@ function hideModal(){
 }
 
 
-function colorChanger(choices){
-    switch (choices[input][computerChoice]){
-        case('win'):
-          gameResult.classList.add('win')
-         
-          userScore++;
-          userBoard.textContent = userScore;
-        break;
-        case('lose'):
-          gameResult.classList.add = 'lose';
-          computerScore++;
-          computerBoard.textContent = computerScore;
-        break;
-       case ('tie'): gameResult.classList.add = 'tie';
-       break;
-       computerScore++;
-       computerBoard.textContent = computerScore;
-    }
-}
-export {displayRules,hideModal,colorChanger}
+
+export {displayRules,hideModal}

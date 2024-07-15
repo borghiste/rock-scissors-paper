@@ -38,23 +38,27 @@ function checker(input){
     userChoiceResult.textContent = input;
     
     computerChoiceResult.textContent = computerChoice;
+    gameResult.classList.remove('win','lose','tie');
+    gameResult.textContent='';
     
     
     switch (choices[input][computerChoice]){
       case('win'):
         gameResult.textContent = 'YOU WIN!';
 
-      gameResult.classList.add('win')
+      gameResult.classList.add('win');
        
         userScore++;
         userBoard.textContent = userScore;
       break;
       case('lose'):
         gameResult.textContent = 'you lose:(';
+        gameResult.classList.add('lose');
         computerScore++;
         computerBoard.textContent = computerScore;
       break;
      case ('tie'): gameResult.textContent = 'tie';
+     gameResult.classList.add('tie');
      break;
      computerScore++;
      computerBoard.textContent = computerScore;
@@ -63,7 +67,5 @@ function checker(input){
     }
 }
 
-let submit = document.querySelector('#begin');
-submit.addEventListener('click',()=>{
 
-})
+
