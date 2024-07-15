@@ -1,3 +1,4 @@
+
 let userChoiceResult = document.querySelector('#user-choice');
 let computerChoiceResult =   document.getElementById('computer-choice');
 let gameResult = document.querySelector('#result');
@@ -22,7 +23,7 @@ scissors:'win',
 rock:'tie',},
 
 }
-console.log(choices);
+
 
 
 
@@ -42,6 +43,9 @@ function checker(input){
     switch (choices[input][computerChoice]){
       case('win'):
         gameResult.textContent = 'YOU WIN!';
+
+      gameResult.classList.add('win')
+       
         userScore++;
         userBoard.textContent = userScore;
       break;
@@ -50,9 +54,16 @@ function checker(input){
         computerScore++;
         computerBoard.textContent = computerScore;
       break;
-     default: console.log('pareggio');
+     case ('tie'): gameResult.textContent = 'tie';
+     break;
+     computerScore++;
+     computerBoard.textContent = computerScore;
         
   
     }
 }
 
+let submit = document.querySelector('#begin');
+submit.addEventListener('click',()=>{
+
+})
