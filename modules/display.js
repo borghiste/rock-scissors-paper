@@ -35,6 +35,8 @@ function MatchesChose(input){modal.innerHTML='';let string = document.createElem
 string.textContent=`you'll play ${input} matches`;
 modal.append(string);
 modalContainer.style.display = 'flex';
+let MatchesChoice = input;
+console.log(MatchesChoice);
 }
 
 

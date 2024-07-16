@@ -6,6 +6,7 @@ let computerBoard = document.querySelector('#computer-score');
 let userBoard = document.querySelector('#user-score');
 let computerScore= 0;
 let userScore = 0;
+let MatchesPlayed =0;
 
 
 
@@ -33,7 +34,7 @@ function checker(input){
     
     let computerChoice = computerChoices[Math.floor(Math.random() * 3)];
    
-    console.log('computer choice', computerChoice);
+    
     
     userChoiceResult.textContent = input;
     
@@ -62,10 +63,29 @@ function checker(input){
      break;
      computerScore++;
      computerBoard.textContent = computerScore;
+     
+     
         
   
     }
+    MatchesPlayed++;
+  checkScore();
 }
+
+function checkScore(){
+  if (userScore === 2 || computerScore === 2){setTimeout(() => { resetScore()
+    
+  }, 5000); 
+   
+    
+
+  }}
+
+
+
+  function resetScore(){
+    userScore =0; computerScore = 0;userBoard.textContent = userScore; computerBoard.textContent = computerScore}
+  
 
 
 
