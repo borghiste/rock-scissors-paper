@@ -1,10 +1,14 @@
-import { displayRules,hideModal } from "./modules/display.js";
+import { displayRules,hideModal,MatchesChose } from "./modules/display.js";
 
 // dichiarazioni variabili globali
 let submit = document.querySelector('#begin');
- 
+let inputField = document.querySelector('input');
 let btnContainer = document.getElementById('btn-container');
 let matches=document.querySelector('matches');
+
+submit.addEventListener('click',()=>{MatchesChose(inputField.value);console.log(inputField.value)})
+
+
 
 
 let computerScore= 0;
@@ -39,7 +43,7 @@ modalContainer.addEventListener('click', ()=>{hideModal()})
 
 
 
-let inputField = document.querySelector('input');
+
 
 
 
@@ -51,15 +55,14 @@ let MatchesCounterinHTML= document.querySelector('#matches-counter');
 
 
 let MatchesChoice= 0;
-// click sul button container
-// TODO
-// sistemare id btn-container
+
+
 
 
  
 
 
-// TODO bug to be fixed
+
   
 
 
