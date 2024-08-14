@@ -6,10 +6,14 @@ let computerBoard = document.querySelector('#computer-score');
 let userBoard = document.querySelector('#user-score');
 let computerScore= 0;
 let userScore = 0;
-let MatchesPlayed =0;
+let numberMatches =0;
+let MatchesPlayed= document.querySelector('#matches-played')
 
 
 
+
+
+// possibili combinazioni di gioco
 const choices ={
     'paper': {paper:'tie',
             scissors:'lose',
@@ -26,7 +30,7 @@ rock:'tie',},
 }
 
 
-
+// funzione per il confronto del gioco.all'inizio vengono rimosse tutte le classi dalla casella di resito gioco. alla fine del confronto il numero di match giocati viene aumentato di uno
 
 function checker(input){
 
@@ -68,12 +72,13 @@ function checker(input){
         
   
     }
-    MatchesPlayed++;
+    numberMatches++;
+    MatchesPlayed.textContent= numberMatches
   checkScore();
 }
 
 function checkScore(){
-  if (userScore === 2 || computerScore === 2){setTimeout(() => { resetScore()
+  if (userScore === 1 || computerScore === 1){setTimeout(() => { resetScore()
     
   }, 5000); 
    
@@ -82,7 +87,7 @@ function checkScore(){
   }}
 
 
-
+// funzione per resettare i punteggi una volta raggiunto il numero massimo di punti da parte di uno dei due giocatori
   function resetScore(){
     userScore =0; computerScore = 0;userBoard.textContent = userScore; computerBoard.textContent = computerScore}
   
