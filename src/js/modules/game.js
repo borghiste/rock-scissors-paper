@@ -77,19 +77,19 @@ function checker(input){
   checkScore();
 }
 
-function checkScore(){
-  if (userScore === 1 || computerScore === 1){setTimeout(() => { resetScore()
+// function checkScore(){
+//   if (userScore === 1 || computerScore === 1){setTimeout(() => { resetScore()
     
-  }, 5000); 
+//   }, 5000); 
    
     
 
-  }}
+//   }}
 
 
-// funzione per resettare i punteggi una volta raggiunto il numero massimo di punti da parte di uno dei due giocatori
-  function resetScore(){
-    userScore =0; computerScore = 0;userBoard.textContent = userScore; computerBoard.textContent = computerScore}
+// // funzione per resettare i punteggi una volta raggiunto il numero massimo di punti da parte di uno dei due giocatori
+//   function resetScore(){
+//     userScore =0; computerScore = 0;userBoard.textContent = userScore; computerBoard.textContent = computerScore}
   
 
 

@@ -6,15 +6,12 @@ let inputField = document.querySelector('input');
 let btnContainer = document.getElementById('btn-container');
 let matches=document.querySelector('matches');
 
-submit.addEventListener('click',()=>{MatchesChose(inputField.value);console.log(inputField.value)})
+// submit.addEventListener('click',(e)=>{MatchesChose(inputField.value);e.preventDefault();submit.disabled=false})
 
 
 
 
-let computerScore= 0;
 
-let MatchesWonbyUser =0;
-let MatchesWonbyComputer = 0;
 let h2 = document.querySelector('h2')
 
 
@@ -39,7 +36,7 @@ modalContainer.addEventListener('click', ()=>{hideModal()})
 
 
 
-// variabili
+
 
 
 
